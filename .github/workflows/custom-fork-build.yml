@@ -21,7 +21,7 @@ jobs:
           sed -i '0,/<version>.*<\/version>/s//<version>23.0<\/version>/' pom.xml
 
       - name: Build with branch override
-        run: mvn package --file pom.xml -Dproject.branch=master
+        run: mvn package --file pom.xml -Dproject.branch=selfbuild
 
       - name: Get correct jar
         id: jar
